@@ -36,3 +36,7 @@ class Player(GameSprite):
            self.rect.y -= self.speed
        if keys[K_s] and self.rect.y < win_height - 80:
            self.rect.y += self.speed
+
+racket1 = Player("src/racket.png", 30, 200, 4, 50, 150)
+racket2 = Player("src/racket.png", 520, 200, 4, 50, 150)
+ball = GameSprite("src/tenis_ball.png", 520, 200, 4, 50, 150)
