@@ -53,7 +53,7 @@ font.init()
 
 font1 = font.Font(None, 35)
 lose1 = font1.render('PLAYER 1 LOSE!', True, (180,0,0))
-lose1 = font1.render('PLAYER 2 LOSE!', True, (180,0,0))
+lose2 = font1.render('PLAYER 2 LOSE!', True, (180,0,0))
 
 
 racket1 = Player("src/racket.png", 30, 200, 4, 50, 150)
