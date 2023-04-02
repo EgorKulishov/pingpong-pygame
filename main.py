@@ -1,5 +1,6 @@
 from pygame import *
-
+win_width = 700
+win_height = 500
 class GameSprite(sprite.Sprite):
  #конструктор класса
    def __init__(self, player_image, player_x, player_y, size_x, size_y, player_speed):
@@ -19,3 +20,13 @@ class GameSprite(sprite.Sprite):
  #метод, отрисовывающий героя на окне
    def reset(self):
        window.blit(self.image, (self.rect.x, self.rect.y))
+
+#класс главного игрока
+class Player(GameSprite):
+   #метод для управления спрайтом стрелками клавиатуры
+   def update(self):
+       keys = key.get_pressed()
+       if keys[K_LEFT] and self.rect.x > 5:
+           self.rect.x -= self.speed
+       if keys[K_RIGHT] and self.rect.x < win_width - 80:
+           self.rect.x += self.speed
